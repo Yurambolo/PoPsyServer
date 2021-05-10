@@ -5,3 +5,4 @@ psycopg2==2.8.6
 whitenoise==5.2.0
 djangorestframework==3.12.4
 mysqlclient==2.0.3
+jsonpickle==2.0.0
