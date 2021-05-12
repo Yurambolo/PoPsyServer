@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="529b9c40-387c-4d15-9d72-b84f69c62d60" name="Default Changelist" comment="" />
+    <list default="true" id="529b9c40-387c-4d15-9d72-b84f69c62d60" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/PoPsyServer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PoPsyServer/settings.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +86,7 @@
       <workItem from="1620729867134" duration="129000" />
       <workItem from="1620743499479" duration="1609000" />
       <workItem from="1620760142922" duration="403000" />
-      <workItem from="1620850825756" duration="339000" />
+      <workItem from="1620850825756" duration="1243000" />
     </task>
     <servers />
   </component>
