@@ -29,7 +29,6 @@ class Article_exp(Content):
     author = ''
 
 class User_exp:
-    id = 0
     name = ''
     surname = ''
     photo = ''
