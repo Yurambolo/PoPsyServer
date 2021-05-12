@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="529b9c40-387c-4d15-9d72-b84f69c62d60" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PoPsyServer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PoPsyServer/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +87,7 @@
       <workItem from="1620729867134" duration="129000" />
       <workItem from="1620743499479" duration="1609000" />
       <workItem from="1620760142922" duration="403000" />
-      <workItem from="1620850825756" duration="1243000" />
+      <workItem from="1620850825756" duration="2083000" />
     </task>
     <servers />
   </component>
@@ -98,22 +99,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620760545068" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1620729995410">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1620852053921">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620729995410" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1620729995410">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620852053921" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1620852053920">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620729995410" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1620729995410">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620852053920" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1620852053920">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620729995410" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1620729995410">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620852053920" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1620852053920">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620729995410" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620852053920" />
     <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1620312237483">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
