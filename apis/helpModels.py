@@ -28,4 +28,13 @@ class Article_exp(Content):
     text = ''
     author = ''
 
+class User_exp:
+    id = 0
+    name = ''
+    surname = ''
+    photo = ''
+    email = ''
+    phone = ''
+    age = 0
+    password = ''
 
