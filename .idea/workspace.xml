@@ -4,6 +4,14 @@
     <list default="true" id="529b9c40-387c-4d15-9d72-b84f69c62d60" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PoPsyServer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PoPsyServer/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/AI/Recomedation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/AI/TextAI.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/AI/model1.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/AI/tokenizer.picle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/helpModels.py" beforeDir="false" afterPath="$PROJECT_DIR$/apis/helpModels.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/helpUrls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apis/helpUrls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/views/apiViews.py" beforeDir="false" afterPath="$PROJECT_DIR$/apis/views/apiViews.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +20,13 @@
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -88,6 +103,7 @@
       <workItem from="1620743499479" duration="1609000" />
       <workItem from="1620760142922" duration="403000" />
       <workItem from="1620850825756" duration="2083000" />
+      <workItem from="1620897202998" duration="13779000" />
     </task>
     <servers />
   </component>
@@ -95,33 +111,60 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1620760545068">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1620897798632">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620760545068" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1620852053921">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620897798632" />
+    <state width="1493" height="235" key="GridCell.Tab.0.bottom" timestamp="1620911094967">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620852053921" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1620852053920">
+    <state width="1493" height="235" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620911094967" />
+    <state width="1493" height="235" key="GridCell.Tab.0.center" timestamp="1620911094966">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620852053920" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1620852053920">
+    <state width="1493" height="235" key="GridCell.Tab.0.center/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620911094966" />
+    <state width="1493" height="235" key="GridCell.Tab.0.left" timestamp="1620911094966">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620852053920" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1620852053920">
+    <state width="1493" height="235" key="GridCell.Tab.0.left/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620911094966" />
+    <state width="1493" height="235" key="GridCell.Tab.0.right" timestamp="1620911094966">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620852053920" />
+    <state width="1493" height="235" key="GridCell.Tab.0.right/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620911094966" />
+    <state width="1493" height="235" key="GridCell.Tab.1.bottom" timestamp="1620911137420">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="235" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620911137420" />
+    <state width="1493" height="235" key="GridCell.Tab.1.center" timestamp="1620911137420">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="235" key="GridCell.Tab.1.center/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620911137420" />
+    <state width="1493" height="235" key="GridCell.Tab.1.left" timestamp="1620911137420">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="235" key="GridCell.Tab.1.left/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620911137420" />
+    <state width="1493" height="235" key="GridCell.Tab.1.right" timestamp="1620911137420">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="235" key="GridCell.Tab.1.right/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620911137420" />
     <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1620312237483">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620312237483" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1620760447905">
+    <state x="246" y="96" key="SettingsEditor" timestamp="1620908915321">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620760447905" />
+    <state x="246" y="96" key="SettingsEditor/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620908915321" />
+    <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1620904886659">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824/1920.-1078.2560.1400@0.0.1536.824" timestamp="1620904886659" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Python.DjangoServer">
+        <watch expression="responce.request" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

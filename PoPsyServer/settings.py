@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-7!3ibi)vk#tliy
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
 ALLOWED_HOSTS = [
-'immense-atoll-09215.herokuapp.com','127.0.0.1','10.0.2.2','localhost'
+'immense-atoll-09215.herokuapp.com','127.0.0.1','10.0.2.2','localhost','shielded-thicket-99002.herokuapp.com'
 ]
 
 
@@ -141,9 +141,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
-db_from_env = dj_database_url.config()
-DATABASES['default']=db_from_env
-#
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/

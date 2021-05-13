@@ -8,6 +8,14 @@ class Music:
     time = ''
     url = ''
 
+class Video:
+    title = ''
+    author = ''
+    image = ''
+    time = ''
+    url = ''
+
+
 class Content:
     title = ''
     status = ''
@@ -29,6 +37,7 @@ class Article_exp(Content):
     author = ''
 
 class User_exp:
+    id = 0
     name = ''
     surname = ''
     photo = ''
