@@ -126,32 +126,6 @@ def getContent(request):
     content = content.tolist()
     return JsonResponse(jsonpickle.decode(jsonpickle.encode(list(content),unpicklable=False)),safe = False)
 
-
-
-
-def getMusicPlayLists(request):
-    musiclists = []
-    playlists = models.AudioList.objects.all()
-    for playlist in playlists:
-        musiclist = helpModels.MusicPlaylist()
-        musiclist.title = playlist.title
-        musiclist.image = playlist.image
-        musiclist.status = 'Songs'
-        musiclist.songs = []
-        songconnecters = models.AudioHasAudioList.objects.filter(audioListId=playlist.id)
-        for songconnecter in songconnecters:
-            audio = models.Audio.objects.filter(id=songconnecter.audioId).first()
-            song = helpModels.Music()
-            song.title = audio.title
-            song.image = audio.image
-            song.author = audio.author
-            song.time = audio.time
-            song.url = audio.url
-            musiclist.songs.append(song)
-        musiclists.append(musiclist)
-
-    return JsonResponse(jsonpickle.decode(jsonpickle.encode(list(musiclists),unpicklable=False)),safe = False)
-
 @csrf_exempt
 def register(request):
     name = request.POST.get("name")
@@ -173,6 +147,21 @@ def register(request):
         user.age = age
         user.password = password
         user.save()
+        useremotions = models.UserEmotions()
+        useremotions.userId = user.id
+        useremotions.empty = 0
+        useremotions.sadness = 0
+        useremotions.enthusiasm = 0
+        useremotions.worry = 0
+        useremotions.surprise = 0
+        useremotions.love = 0
+        useremotions.fun = 0
+        useremotions.hate = 0
+        useremotions.happiness = 0
+        useremotions.boredom = 0
+        useremotions.relief = 0
+        useremotions.anger = 0
+        useremotions.save()
         return HttpResponse()
 
 @csrf_exempt
