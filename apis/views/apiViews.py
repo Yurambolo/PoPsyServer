@@ -1,3 +1,6 @@
+import os
+
+import boto3
 from rest_framework import generics
 from django.http import HttpResponse, JsonResponse, HttpResponseBadRequest
 from .. import models, helpModels
@@ -126,6 +129,7 @@ def getContent(request):
     content = content.tolist()
     return JsonResponse(jsonpickle.decode(jsonpickle.encode(list(content),unpicklable=False)),safe = False)
 
+
 @csrf_exempt
 def register(request):
     name = request.POST.get("name")
@@ -183,3 +187,43 @@ def singIn(request):
             return JsonResponse(jsonpickle.decode(jsonpickle.encode(user_exp,unpicklable=False)),safe = False)
     else:
         return HttpResponseBadRequest()
+
+
+@csrf_exempt
+def getUser(request):
+    userId = request.POST.get("userId")
+    if models.User.objects.filter(id=userId).exists():
+        user = models.User.objects.get(id=userId)
+        user_exp = helpModels.User_exp()
+        user_exp.id = user.id
+        user_exp.name = user.name
+        user_exp.surname = user.surname
+        user_exp.email = user.email
+        user_exp.password = user.password
+        user_exp.age = user.age
+        user_exp.phone = user.phone
+        user_exp.photo = user.photo
+        return JsonResponse(jsonpickle.decode(jsonpickle.encode(user_exp,unpicklable=False)),safe = False)
+    else:
+        return HttpResponseBadRequest()
+
+
+def sign_s3(request):
+    S3_BUCKET = os.environ.get('S3_BUCKET')
+    filename = request.POST.get("filename")
+    filetype = request.POST.get("filetype")
+    s3 = boto3.client('s3')
+    presigned_post = s3.generate_presigned_post(
+        Bucket=S3_BUCKET,
+        Key=filename,
+        Fields={"acl": "public-read", "Content-Type": filetype},
+        Conditions=[
+            {"acl": "public-read"},
+            {"Content-Type": filetype}
+        ],
+        ExpiresIn=3600
+    )
+    return json.dumps({
+        'data': presigned_post,
+        'url': 'https://%s.s3.amazonaws.com/%s' % (S3_BUCKET, filename)
+    })
