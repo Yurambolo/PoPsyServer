@@ -216,8 +216,8 @@ def getUser(request):
 
 def sign_s3(request):
     S3_BUCKET = os.environ.get('S3_BUCKET')
-    userId = request.POST.get("userId")
-    filename = 'avatar_user' + userId
+    #userId = request.POST.get("userId")
+    filename = 'avatar_user'
     filetype = request.POST.get("filetype")
     s3 = boto3.client('s3')
     presigned_post = s3.generate_presigned_post(
