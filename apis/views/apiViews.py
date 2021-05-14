@@ -192,6 +192,7 @@ def singIn(request):
 @csrf_exempt
 def getUser(request):
     userId = request.POST.get("userId")
+    userId = int(userId)
     if models.User.objects.filter(id=userId).exists():
         user = models.User.objects.get(id=userId)
         user_exp = helpModels.User_exp()
