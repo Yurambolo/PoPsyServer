@@ -138,6 +138,10 @@ def register(request):
     email = request.POST.get("email")
     phone = request.POST.get("phone")
     age = request.POST.get("age")
+    if age != 'null':
+        age = int(age)
+    else:
+        age = None
     password = request.POST.get("password")
     if models.User.objects.filter(email=email).exists():
         return HttpResponseBadRequest()
@@ -166,7 +170,8 @@ def register(request):
         useremotions.relief = 0
         useremotions.anger = 0
         useremotions.save()
-        return HttpResponse()
+        return JsonResponse(jsonpickle.decode(jsonpickle.encode(user.id, unpicklable=False)), safe=False)
+
 
 @csrf_exempt
 def singIn(request):
