@@ -1,11 +1,6 @@
-import os
-
-import boto3
-from rest_framework import generics
 from django.http import HttpResponse, JsonResponse, HttpResponseBadRequest
 from .. import models, helpModels
 import jsonpickle
-import json
 from django.views.decorators.csrf import csrf_exempt
 import numpy as np
 import requests
@@ -212,27 +207,3 @@ def getUser(request):
         return JsonResponse(jsonpickle.decode(jsonpickle.encode(user_exp,unpicklable=False)),safe = False)
     else:
         return HttpResponseBadRequest()
-
-@csrf_exempt
-def sign_s3(request):
-    S3_BUCKET = os.environ.get('S3_BUCKET')
-    #userId = request.POST.get("userId")
-    filename = 'avatar_user'
-    filetype = request.POST.get("filetype")
-    s3 = boto3.client('s3')
-    presigned_post = s3.generate_presigned_post(
-        Bucket=S3_BUCKET,
-        Key=filename,
-        Fields={"acl": "public-read", "Content-Type": filetype},
-        Conditions=[
-            {"acl": "public-read"},
-            {"Content-Type": filetype}
-        ],
-        ExpiresIn=3600
-    )
-    return json.dumps({
-        'success': True,
-        'message' : '',
-        'uploadUrl': presigned_post,
-        'Downloadurl': 'https://%s.s3.amazonaws.com/%s' % (S3_BUCKET, filename)
-    })
