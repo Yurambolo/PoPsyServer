@@ -213,7 +213,7 @@ def getUser(request):
     else:
         return HttpResponseBadRequest()
 
-
+@csrf_exempt
 def sign_s3(request):
     S3_BUCKET = os.environ.get('S3_BUCKET')
     #userId = request.POST.get("userId")
