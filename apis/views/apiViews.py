@@ -216,7 +216,8 @@ def getUser(request):
 
 def sign_s3(request):
     S3_BUCKET = os.environ.get('S3_BUCKET')
-    filename = request.POST.get("filename")
+    userId = request.POST.get("userId")
+    filename = 'avatar_user' + userId
     filetype = request.POST.get("filetype")
     s3 = boto3.client('s3')
     presigned_post = s3.generate_presigned_post(
@@ -230,6 +231,8 @@ def sign_s3(request):
         ExpiresIn=3600
     )
     return json.dumps({
-        'data': presigned_post,
-        'url': 'https://%s.s3.amazonaws.com/%s' % (S3_BUCKET, filename)
+        'success': True,
+        'message' : '',
+        'uploadUrl': presigned_post,
+        'Downloadurl': 'https://%s.s3.amazonaws.com/%s' % (S3_BUCKET, filename)
     })
