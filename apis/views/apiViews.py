@@ -321,6 +321,9 @@ def register(request):
         useremotions.relief = 0
         useremotions.anger = 0
         useremotions.save()
+        diary = models.Diary()
+        diary.userId=user.id
+        diary.save()
         return JsonResponse(jsonpickle.decode(jsonpickle.encode(user.id, unpicklable=False)), safe=False)
 
 
