@@ -152,9 +152,10 @@ def postTestResult(request):
     testResult = models.TestResult()
     testResult.testId = int(request.POST.get("testId"))
     testResult.userId = int(request.POST.get("userId"))
-    testResult.date = datetime.strptime(request.POST.get("testResult")["date"],'%y-%m-YdT%H:%M:%S%z')
-    testResult.result = request.POST.get("testResult")["result"]
-    testResult.image = request.POST.get("testResult")["image"]
+    date = datetime.fromisoformat(request.POST.get("date"))
+    testResult.date = date
+    testResult.result = request.POST.get("result")
+    testResult.image = request.POST.get("image")
     testResult.save()
     return HttpResponse()
 
