@@ -128,6 +128,7 @@ def prepareSession(request):
     sessionsQ = models.TestResult.objects.filter(userId=currentUserId)
     session = []
     used = []
+    results = []
     for i in sessionsQ:
         res = helpModels.TestResult()
         res.result = i.result
@@ -138,8 +139,8 @@ def prepareSession(request):
             ses = helpModels.TestSession()
             used.append(i.testId)
             ses.id = i.testId
-            ses.Sessions.append(res)
-            ses.Sessions = jsonpickle.decode(jsonpickle.encode(list(ses.Sessions), unpicklable=False))
+            results.append(res)
+            ses.Sessions = jsonpickle.decode(jsonpickle.encode(list(results), unpicklable=False))
             session.append(ses)
         else:
             session[used.index(i.testId)].Sessions.append(res)
