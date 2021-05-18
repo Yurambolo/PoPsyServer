@@ -185,7 +185,7 @@ def postTestResult(request):
     date = datetime.fromisoformat(request.POST.get("date"))
     testResult.date = date
     testResult.result = request.POST.get("result")
-    testResult.image = request.POST.get("image")
+    testResult.photo = request.POST.get("image")
     testResult.save()
     return HttpResponse()
 
