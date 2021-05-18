@@ -384,3 +384,32 @@ def getUserByEmail(request):
         return JsonResponse(jsonpickle.decode(jsonpickle.encode(user_exp,unpicklable=False)),safe = False)
     else:
         return HttpResponseBadRequest()
+
+
+@csrf_exempt
+def updateUser(request):
+    id = request.POST.get("id")
+    name = request.POST.get("name")
+    surname = request.POST.get("surname")
+    image = request.POST.get("image")
+    email = request.POST.get("email")
+    phone = request.POST.get("phone")
+    age = request.POST.get("age")
+    if age != 'null':
+        age = int(age)
+    else:
+        age = None
+    password = request.POST.get("password")
+    if models.User.objects.filter(id=id).exists():
+        user = models.User.objects.get(id=id)
+        user.name = name
+        user.surname = surname
+        user.photo = image
+        user.email = email
+        user.phone = phone
+        user.age = age
+        user.password = password
+        user.save()
+        return JsonResponse(jsonpickle.decode(jsonpickle.encode(user.id, unpicklable=False)), safe=False)
+    else:
+        return HttpResponseBadRequest()
